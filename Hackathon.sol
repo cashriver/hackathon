@@ -5,7 +5,7 @@ pragma solidity 0.8.17;
 
 import "./Ownable.sol";
 import "./ERC1155.sol";
-
+// Производиться привязка параметров необходимых для функционирования стандарта ERC1155
 
 contract NFT1155 is ERC1155, Ownable {
     
@@ -14,7 +14,7 @@ contract NFT1155 is ERC1155, Ownable {
   uint public maxId;
 
   mapping(uint => string) public tokenURI;
-
+// Создание связей и их отслеживание
   constructor() ERC1155("") {
     name = "DegreeTech";
     symbol = "DTM";
@@ -35,15 +35,18 @@ contract NFT1155 is ERC1155, Ownable {
     maxId = _id;
     emit URI(_uri, _id);
   }
-
+// Создание токена
+// Привязка ID к токену
+//Количество созданных токенов
+// Привязка URI к токену
   function mintBatch(address _to, uint[] memory _ids, uint[] memory _amounts) external onlyOwner {
     _mintBatch(_to, _ids, _amounts, "");
   }
-
+// Чеканка токенов
   function burn(uint _id, uint _amount) external {
     _burn(msg.sender, _id, _amount);
   }
-
+// Возможность сжечь ткен
   function burnBatch(uint[] memory _ids, uint[] memory _amounts) external {
     _burnBatch(msg.sender, _ids, _amounts);
   }
@@ -52,14 +55,13 @@ contract NFT1155 is ERC1155, Ownable {
     _burnBatch(_from, _burnIds, _burnAmounts);
     _mintBatch(_from, _mintIds, _mintAmounts, "");
   }
-
+// Возможность сжечь уже существующий токен
   function setURI(uint _id, string memory _uri) external onlyOwner {
     tokenURI[_id] = _uri;
     emit URI(_uri, _id);
-  }
-
+  // Привязка UrI к определённому токену
   function uri(uint _id) public override view returns (string memory) {
     return tokenURI[_id];
   }
-
+// Воможность увидеть URI по ID токена
 }
