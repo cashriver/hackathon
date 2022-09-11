@@ -1,5 +1,14 @@
-# Welcome to GitHub Desktop!
+# Education 2
+![image](https://user-images.githubusercontent.com/106698210/189530744-1d9b9192-05fb-40d4-9d47-edd414dc23cc.png)
 
-This is your README. READMEs are where you can communicate what your project is and how to use it.
+Cервис для автоматической генерации дипломов на основе шаблона и параметров с дальнейшей публикацией в блокчейне
 
-Write your name on line 6, save it, and then head back to GitHub Desktop.
+# Краткое описание функционала:
+# 1. Создание картинок дипломов на основании шаблонов и параметров
+# 2. Выгрузка полученных файлов в IPFS
+# 3. Передача всей необходимой информации в смарт-контракт
+# 4. Отправка писем на почту студентам с дипломами
+
+Исходный файл бэкэнда: [main.py](https://github.com/cashriver/hackathon/blob/main/main.py)
+
+Разработан в рамках блокчейн-хакатона Mbl.tech Academy совместно с ProductStar за 2 дня
