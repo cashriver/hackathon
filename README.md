@@ -10,5 +10,6 @@
  4. Отправка писем на почту студентам с дипломами
 
 Исходный файл бэкэнда: [main.py](https://github.com/cashriver/hackathon/blob/main/main.py)
+Основной файл смарт-контракта: [Hackathon.sol](https://github.com/cashriver/hackathon/blob/main/Hackathon.sol)
 
 Разработан в рамках блокчейн-хакатона Mbl.tech Academy совместно с ProductStar за 2 дня
